@@ -1,4 +1,4 @@
-> [!abstract]  Grupo
+Grupo
 > - Artur Lopes Fiorindo 553481 
 > - Eduardo Felipe Nunes Função 553362 
 > - Jhoe Yoshio Kochi Hashimoto 553831  
