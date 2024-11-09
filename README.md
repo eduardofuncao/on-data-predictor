@@ -3,9 +3,9 @@
 > - Eduardo Felipe Nunes Função 553362 
 > - Jhoe Yoshio Kochi Hashimoto 553831  
 
-> [!quote]  Link para o vídeo apresentando o projeto
-> Desenvolvimento: https://youtu.be/bX3TetzVsJc
-> Pitch: https://www.youtube.com/watch?v=eZkiuw65Szw
+Link para o vídeo apresentando o projeto
+- Desenvolvimento: https://youtu.be/bX3TetzVsJc
+- Pitch: https://www.youtube.com/watch?v=eZkiuw65Szw
 
 
 # On Data
