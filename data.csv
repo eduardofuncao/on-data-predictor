@@ -1,0 +1,21 @@
+id_paciente,nome,genero,idade,endereco,cidade,email,fumante,renda,visitas_ano,categoria
+1,José Silva,M,35,Rua dos Pássaros 123,São Paulo,jose.silva@email.com,N,50000,2,A
+2,Maria Oliveira,F,28,Avenida Brasil 456,Rio de Janeiro,mari.oliveira@email.com,S,30000,1,B
+3,Pedro Santos,M,42,Rua das Flores 789,Curitiba,pedro.santos@email.com,N,60000,3,A
+4,Luana Costa,F,25,Rua do Sol 321,Porto Alegre,luana.costa@email.com,S,45000,2,B
+5,João Alves,M,39,Rua da Praia 901,Salvador,joao.alves@email.com,N,55000,1,A
+6,Ana Souza,F,32,Rua do Mar 234,Brasília,ana.souza@email.com,S,35000,3,B
+7,Carlos Lima,M,48,Rua das Árvores 567,Belo Horizonte,carlos.lima@email.com,N,70000,2,A
+8,Beatriz Martins,F,29,Rua do Rio 890,Recife,beatriz.martins@email.com,S,38000,1,B
+9,Rodrigo Dias,M,41,Rua dos Ventos 345,Goiânia,rodrigo.dias@email.com,N,52000,3,A
+10,Silvia Santos,F,36,Rua das Estrelas 678,Campinas,silvia.santos@email.com,S,42000,2,B
+11,Marcos Silva,M,44,Rua do Sol 901,São Paulo,marcos.silva@email.com,N,65000,1,A
+12,Laura Oliveira,F,27,Rua da Lua 234,Rio de Janeiro,laura.oliveira@email.com,S,32000,3,B
+13,Pedro Costa,M,38,Rua dos Sonhos 567,Curitiba,pedro.costa@email.com,N,58000,2,A
+14,Júlia Alves,F,31,Rua do Mar 890,Porto Alegre,julia.alves@email.com,S,37000,1,B
+15,João Lima,M,46,Rua das Árvores 345,Salvador,joao.lima@email.com,N,72000,3,A
+16,Ana Dias,F,34,Rua do Rio 789,Brasília,ana.dias@email.com,S,40000,2,B
+17,Carlos Martins,M,43,Rua dos Ventos 901,Belo Horizonte,carlos.martins@email.com,N,60000,1,A
+18,Beatriz Souza,F,30,Rua das Estrelas 456,Recife,beatriz.souza@email.com,S,38000,3,B
+19,Rodrigo Santos,M,40,Rua do Sol 567,Goiânia,rodrigo.santos@email.com,N,55000,2,A
+20,Silvia Costa,F,37,Rua da Lua 890,Campinas,silvia.costa@email.com,S,45000,1,B
