@@ -1,7 +1,8 @@
 ![374370531-87ad94eb-a00e-43b5-84c4-fbf7f7b9fd7d](https://github.com/user-attachments/assets/a1615722-5ee0-4f77-b747-e4d6cca2a301)
 
 # On Data Predictor
-https://github.com/eduardofuncao/on-data-predictor
+- Repositório: https://github.com/eduardofuncao/on-data-predictor
+- Vídeo de Apresentação: https://youtu.be/owYO5RxX57A
 
 Ferramenta para predição de custo de plano de saúde e categorização de risco de clientes utilizando técnicas de machine learning, oferecida para Odontoprev por meio do Challange Fiap.
 
