@@ -7,7 +7,7 @@ Além disso, também é desejável que o sistema possa prever uma estimativa par
 
 ## Escolha e Treinamento dos modelos
 Para este projeto, como não foram fornecidos datasets específicos para o treinamento do modelo, foi selecionado um dataset público que relaciona informações de pacientes ao preço de seu plano de saúde.
-Os detalhes do treinamento dos modelos pode ser visualizado no notebook em `/ml-models`, na raíz do diretório. Ao final das análises, os modelos mais eficientes foram exportados para utilização dentro de uma API REST
+Os detalhes do treinamento dos modelos pode ser visualizado no notebook em `/ml-training' (na raíz do diretório), ou através do link de visualização para o Google Collab [Notebook Google Collab](https://colab.research.google.com/drive/19hOUn-8Pp8iPUhMlxhvgsPjVJAvgxmjX?usp=sharing). Ao final das análises, os modelos mais eficientes foram exportados para utilização dentro de uma API REST
 
 
 ## API para integração com outros serviços
