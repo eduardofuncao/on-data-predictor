@@ -7,18 +7,18 @@
 Ferramenta para predição de custo de plano de saúde e categorização de risco de clientes utilizando técnicas de machine learning, oferecida para Odontoprev por meio do Challange Fiap.
 
 ## Estratégia do projeto
-O projeto principal do qual esta ferramente faz parte é um sistema de gerenciamento de sinistros para pacientes de planos odontológicos. Devido a isso, é de extrema importância que os pacientes possam ser categorizados em grupos de risco bem determinados. Uma estratégia para garantir que isso funcione é utlizando um modelo de clusterização.
+O projeto principal do qual esta ferramente faz parte é um sistema de gerenciamento de sinistros para pacientes de planos odontológicos fornecido à Odontoprev através do Challange Fiap. Devido a isso, é de extrema útilidade para a companhia que os pacientes possam ser categorizados em grupos de risco bem determinados. Uma estratégia para garantir que isso funcione é utlizando um modelo de clusterização.
 Além disso, também é desejável que o sistema possa prever uma estimativa para os custos do plano de saúde odontológico de um determinado paciente com base em algumas informações básicas sobre sua saúde que fazem parte de sua ficha cadastral (como por exemplo BMI, idade, se fuma, etc.). Algumas técnicas de machine learning podem ser utilizadas para alcançar este objetivo, como por exemplo o uso de um modelo de Regressão.
 
 ## Escolha e Treinamento dos modelos
 Para este projeto, foi utilizado um dataset público que contém informações sobre custos de planos de saúde com base em características dos pacientes como idade, IMC, número de filhos, sexo, status de fumante e região geográfica. A análise exploratória revelou correlações importantes:
 
-- O status de fumante é o fator que mais impacta no custo do plano de saúde
+- O status de fumante é o fator mais impactante no custo do plano de saúde
 - Existe uma correlação positiva entre idade e custo, mais pronunciada em fumantes
 - O IMC mostra uma correlação positiva moderada com o custo
 - O número de filhos e a região geográfica têm impacto menor
 
-Para potencializar o efeito do status de fumante, foram criadas duas features adicionais:
+Para potencializar o efeito do status de fumante, foram criadas duas features adicionais, que potencializam a força do status de fumante de um cliente em relação com outras features do dataset:
 
 - smoker_bmi: IMC multiplicado pelo status de fumante (1 para fumantes, 0 para não fumantes)
 - smoker_age: Idade multiplicada pelo status de fumante (1 para fumantes, 0 para não fumantes)
@@ -81,6 +81,13 @@ Buscando a melhor alternativa de disponibilizar os modelos treinados para outros
 e seguir um padrão que forneça repetibilidade e segurança aos serviços. Sendo um microserviço, essa aplicação não está atrelada à outro projeto monolítico dentro do sistema, mas sim acessível por ele. 
 Uma opção considerada a priori foi a de fazer a predição diretamente no Backend Spring Boot. Apesar de funcional, essa solução é menos modular e não se adapta bem a grandes mudanças em outras frentes do projeto. 
 Caso o backend migrasse para outra plataforma, o código para acesso aos modelos de Machine Learning seria quase totalmente perdido.
+Para a implementação dessa arquitetura, todos os serviços da aplicação foram transformados em contâiners docker, garantindo modularidade, autonomia e confiabilidade aos serviços desenvolvidos.
+
+Apresentação Final
+
+
+Conclusão
+Embora classificar clientes de plano de saúde seja uma tarefa desafiadora (uma vez que um erro na classificação inicial pode acarretar na perda de um cliente em potencial), ela se mostra necessária para que a companhia possa garantir uma vantagem em relação aos seus competidores. Nesse projeto, foi usada uma base de dados de teste, que não possui dados em larga escala. Com a expertise e números da Odontoprev, este projeto poderia ser refinado de forma que os modelos desenvolvidos se tornassem ainda mais precisos. É importante ressaltar que estes modelos de machine learning, por envolverem dados sensíveis e decisões complexas, nunca podem ser utilizados para decisões finais, mas sim como um auxílio à análise minuciosa e criteriosa de uma pessoa (neste caso, um funcionário da odontoprev). É certo que, como ferramenta auxiliar, esta aplicação pode fornecer dados e insigths valiosos e de forma muito mais rápida e organizada do que com algum tipo de análise manual.
 
 ## Integrantes
 - Artur Fiorindo RM553481
