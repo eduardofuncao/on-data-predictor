@@ -11,8 +11,37 @@ O projeto principal do qual esta ferramente faz parte é um sistema de gerenciam
 Além disso, também é desejável que o sistema possa prever uma estimativa para os custos do plano de saúde odontológico de um determinado paciente com base em algumas informações básicas sobre sua saúde que fazem parte de sua ficha cadastral (como por exemplo BMI, idade, se fuma, etc.). Algumas técnicas de machine learning podem ser utilizadas para alcançar este objetivo, como por exemplo o uso de um modelo de Regressão.
 
 ## Escolha e Treinamento dos modelos
-Para este projeto, como não foram fornecidos datasets específicos para o treinamento do modelo, foi selecionado um dataset público que relaciona informações de pacientes ao preço de seu plano de saúde.
-Os detalhes do treinamento dos modelos pode ser visualizado no notebook em `/ml-training' (na raíz do diretório), ou através do link de visualização para o Google Collab [Notebook Google Collab](https://colab.research.google.com/drive/19hOUn-8Pp8iPUhMlxhvgsPjVJAvgxmjX?usp=sharing). Ao final das análises, os modelos mais eficientes foram exportados para utilização dentro de uma API REST
+Para este projeto, foi utilizado um dataset público que contém informações sobre custos de planos de saúde com base em características dos pacientes como idade, IMC, número de filhos, sexo, status de fumante e região geográfica. A análise exploratória revelou correlações importantes:
+
+- O status de fumante é o fator que mais impacta no custo do plano de saúde
+- Existe uma correlação positiva entre idade e custo, mais pronunciada em fumantes
+- O IMC mostra uma correlação positiva moderada com o custo
+- O número de filhos e a região geográfica têm impacto menor
+
+Para potencializar o efeito do status de fumante, foram criadas duas features adicionais:
+
+- smoker_bmi: IMC multiplicado pelo status de fumante (1 para fumantes, 0 para não fumantes)
+- smoker_age: Idade multiplicada pelo status de fumante (1 para fumantes, 0 para não fumantes)
+
+Seis modelos de regressão foram avaliados para predição de custos:
+
+1. Regressão Linear
+2. Regressão Ridge
+3. Regressão Lasso
+4. Random Forest
+5. Gradient Boosting
+6. Support Vector Regression (SVR)
+
+O Gradient Boosting apresentou os melhores resultados com um R² de 0,8772. A análise de importância de features confirmou que smoker_bmi foi a característica mais relevante (corroborando para a estratégia de implementação dessas features de correlação), seguida pelo status de fumante e idade, enquanto região e sexo tiveram influência mínima. Esse algoritmo será utilizado para prever o custo de um paciente ao plano de saúde, a depender das características analisadas.
+
+Para a segmentação de clientes, foi utilizado o algoritmo K-means com k=4 (determinado pelo método do cotovelo). As features utilizadas incluíram idade, IMC, número de filhos, custos, smoker_bmi e smoker_age. Os clusters resultantes foram categorizados em níveis de risco:
+
+- Baixo Risco: Clientes mais jovens (até 30 anos), não fumantes, custos mais baixos
+- Risco Médio: Clientes de meia-idade (30-50 anos), não fumantes, segundo menor custo
+- Alto Risco: Clientes mais velhos, não fumantes, custos moderadamente altos
+- Risco Muito Alto: Contém quase todos os fumantes do dataset, custos mais altos
+
+Ambos os modelos foram exportados para uso posterior na API Flask, possibilitando avaliação do custo de um paciente para o plano de saúde, também incluindo cada usuário a um grupo de risco baseado em suas caracterśticas estabelecidas.
 
 
 ## API para integração com outros serviços
