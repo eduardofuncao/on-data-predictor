@@ -84,7 +84,7 @@ Caso o backend migrasse para outra plataforma, o código para acesso aos modelos
 Para a implementação dessa arquitetura, todos os serviços da aplicação foram transformados em contâiners docker, garantindo modularidade, autonomia e confiabilidade aos serviços desenvolvidos.
 
 Apresentação Final
-
+https://youtu.be/vtfjKXHb_9A
 
 Conclusão
 Embora classificar clientes de plano de saúde seja uma tarefa desafiadora (uma vez que um erro na classificação inicial pode acarretar na perda de um cliente em potencial), ela se mostra necessária para que a companhia possa garantir uma vantagem em relação aos seus competidores. Nesse projeto, foi usada uma base de dados de teste, que não possui dados em larga escala. Com a expertise e números da Odontoprev, este projeto poderia ser refinado de forma que os modelos desenvolvidos se tornassem ainda mais precisos. É importante ressaltar que estes modelos de machine learning, por envolverem dados sensíveis e decisões complexas, nunca podem ser utilizados para decisões finais, mas sim como um auxílio à análise minuciosa e criteriosa de uma pessoa (neste caso, um funcionário da odontoprev). É certo que, como ferramenta auxiliar, esta aplicação pode fornecer dados e insigths valiosos e de forma muito mais rápida e organizada do que com algum tipo de análise manual.
